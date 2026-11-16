@@ -1,0 +1,12 @@
+name: ipr-hw3
+services:
+  iprhw:
+    build: .
+    ports:
+      - "127.0.0.1:8080:8000"
+    environment:
+      GREETING: "Hello from Compose!"
+    volumes:
+      - ipr_hw_volume:/data
+volumes:
+  ipr_hw_volume:
